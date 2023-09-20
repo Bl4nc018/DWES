@@ -35,20 +35,13 @@ Este es mi primer archivo README.md. Será usado de prueba para ir comprendiendo
 \## 📁 Acceso al proyecto
 
 **Haces doble clic con tu ratón sobre el archivo README.**
-
-
-
--> GitHub
-
-
-
--> Nadie, por desgracia.
+ç
 
 
 
 ## Autores
 
-| [<img src="https://avatars.githubusercontent.com/u/92156488?s=400&u=1302f75511bad4df69803bf7b66443a1a8364b60&v=4" width=115><br><sub>Ania Blanco</sub>](https://github.com/Bl4nc018) | :---: | :---: | :---: |
+| [<img src="https://avatars.githubusercontent.com/u/92156488?s=400&u=1302f75511bad4df69803bf7b66443a1a8364b60&v=4" width=115><br><sub>Ania Blanco</sub>](https://github.com/Bl4nc018) |
 
 
 
