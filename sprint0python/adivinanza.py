@@ -16,7 +16,6 @@ else:
 
 ## Ejercicio 2:
 
-
 print("No muerde ni ladra, pero tiene dientes y la casa guarda. ¿Qué es?")
 sol = input ("a. Una llave, b. Un gato, c. Una puerta: ")
 print("")
