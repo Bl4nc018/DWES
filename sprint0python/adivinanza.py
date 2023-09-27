@@ -1,42 +1,47 @@
-## Ejercicio 1:
 
-print("")
-print("¿Qué cosa es que cuanto más le quitas más grande es? ")
-sol = input ("a. Un agujero, b. Un coche, c. Un río: ")
-print("")
+## Ejercicio 6:
 
-puntos=0
+import random
 
-if(sol != 'a'):
-    print("Error. Esa es la respuesta incorrecta.\n")
-    puntos=puntos-5
-else:
-    print("¡Enhorabuena! Has acertado.\n")
-    puntos=puntos+10
+puntos = 0
+veces = 0
 
-## Ejercicio 2:
+adivinanzas = {
+    1: "¿Qué cosa es que cuanto más le quitas más grande es?\na. Un agujero, b. Un coche, c. Un río: ",
+    2: "No muerde ni ladra, pero tiene dientes y la casa guarda. ¿Qué es?\na. Una llave, b. Un gato, c. Una puerta: ",
+    3: "Adivina, esta difícil adivinanza, ¿cuál es el ave que tiene la panza llana?\na. Una avellana, b. Una cigüeña, c. Un avión de papel: ",
+}
 
-print("No muerde ni ladra, pero tiene dientes y la casa guarda. ¿Qué es?")
-sol = input ("a. Una llave, b. Un gato, c. Una puerta: ")
-print("")
+claves_adivinanzas = list(adivinanzas.keys())
 
-if(sol != 'a'):
-    print("Error. Esa es la respuesta incorrecta.\n")
-    puntos=puntos-5
-else:
-    print("¡Enhorabuena! Has acertado.\n")
-    puntos=puntos+10
+while veces < 3:
+    sel = random.sample(claves_adivinanzas, 1)[0]
+    claves_adivinanzas.remove(sel) 
 
+    print(adivinanzas[sel])
+    sol = input("\t")
+    veces += 1
 
-print("Adivina, esta difícil adivinanza, ¿cuál es el ave que tiene la panza llana?")
-sol = input ("a. Una avellana, b. Una cigueña, c. Un avión de papel: ")
+    if sel == 1:
+        if sol == 'a':
+            print("\n¡Enhorabuena! Has acertado.\n")
+            puntos += 10
+        else:
+            print("\nError. Esa es la respuesta incorrecta.\n")
+            puntos -= 5
+    elif sel == 2:
+        if sol == 'a':
+            print("\n¡Enhorabuena! Has acertado.\n")
+            puntos += 10
+        else:
+            print("\nError. Esa es la respuesta incorrecta.\n")
+            puntos -= 5
+    elif sel == 3:
+        if sol == 'a':
+            print("\n¡Enhorabuena! Has acertado.\n")
+            puntos += 10
+        else:
+            print("\nError. Esa es la respuesta incorrecta.\n")
+            puntos -= 5
 
-if(sol != 'a'):
-    print("Error. Esa es la respuesta incorrecta.\n")
-    puntos=puntos-5
-else:
-    print("¡Enhorabuena! Has acertado.\n")
-    puntos=puntos+10
-
-print("Ha finalizado el juego. Felicidades, tienes un total de: "+str(puntos))
-print("\n")
+print("Ha finalizado el juego. Felicidades, tienes un total de: " + str(puntos) + "\n")
