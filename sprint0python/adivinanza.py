@@ -2,7 +2,7 @@
 
 print("")
 print("¿Qué cosa es que cuanto más le quitas más grande es? ")
-sol = input ("a. Un a0gujero, b. Un coche, c. Un río: ")
+sol = input ("a. Un agujero, b. Un coche, c. Un río: ")
 print("")
 
 puntos=0
