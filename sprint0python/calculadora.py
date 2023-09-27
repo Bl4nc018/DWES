@@ -21,6 +21,8 @@ while repetir == 's':
         print("\nEl resultado de su operación es: "+str(opSolucion))
     elif operacion == 'division':
         opSolucion=division(numero1, numero2)
+        if numero1==0 or numero2==0:
+            repetir = input("\n¿Desea utilizar de nuevo la calculadora? (s/n): ")
         print("\nEl resultado de su operación es: "+str(opSolucion))
 
     repetir = input("\n¿Desea utilizar de nuevo la calculadora? (s/n): ")
