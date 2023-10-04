@@ -8,6 +8,17 @@ class MainWindow():
 
     def __init__(self, root) -> None:
         self.root = root
+<<<<<<< HEAD
+=======
+
+        #Etiqueta
+        self.label = ttk.Label(text = "Este mensaje es poco importante")
+        self.label.pack()
+        
+        #Botón
+        self.button = ttk.Button(text = "Realizar la acción", command = self.onButtonClicked)
+        self.button.pack()
+>>>>>>> 8e0128757d52d273e008b884751ac09473d84315
 
         #Frame
         self.frame = ttk.Frame(self.root)
