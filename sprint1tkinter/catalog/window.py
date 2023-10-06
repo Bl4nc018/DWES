@@ -34,4 +34,4 @@ class MainWindow():
             ## Lo que se mostrará en la ventana:
             label = ttk.Label(root, image=cell.image_tk, text=cell.title, compound= tk.BOTTOM)
             label.grid(row=0,column=i)
-            label.bind("<Button-1>",lambda event, celda = cell: self.on_button_clicked(cell))
+            label.bind("<Button-1>",lambda event, cell = cell: self.on_button_clicked(cell))
