@@ -1,0 +1,27 @@
+[
+  {
+  "name": "Divinity Original Sin II",
+  "descripcion": "Divinity: Original Sin 2: Héroes con habilidades mágicas prohibidas buscan escapar de la isla de Fort Joy y desvelar un misterio divino en un mundo oscuro.",
+  "image_url": "https://github.com/Bl4nc018/DWES/blob/main/edited/300px-Divinity_Original_Sin_II_-_Definitive_Edition_cover%20(100x100).jpg"
+  },
+  {
+  "name": "Baldur's Gate III",
+  "descripcion": "Baldur's Gate 3: Lucha contra los azotamentes en un mundo de fantasía épica mientras buscas una cura para la infección alienígena.",
+  "image_url": "https://github.com/Bl4nc018/DWES/blob/main/edited/Baldurs%20gate%203%20game%20cover%20(100x100).jpg"
+  },
+  {
+  "name": "Mass Effect: Legendary Edition",
+  "descripcion": "Mass Effect Legendary Edition: Épica saga espacial con decisiones cruciales y una galaxia llena de peligros.",
+  "image_url": "https://github.com/Bl4nc018/DWES/blob/main/edited/Mass%20Effect%20game%20cover%20(100x100).jpg"
+  },
+  {
+  "name": "Persona 5",
+  "descripcion": "Persona 5: Juego de rol con adolescentes luchando contra la corrupción en mundos paralelos.",
+  "image_url": "https://github.com/Bl4nc018/DWES/blob/main/edited/Persona_5_cover_art%20(100x100).jpg"
+  },
+  {
+  "name": "The Elder Scrolls V: Skyrim",
+  "descripcion": "The Elder Scrolls V: Skyrim es un ARPG del tipo mundo abierto desarrollado por Bethesda Game Studios y publicado por Bethesda Softworks.",
+  "image_url": "https://github.com/Bl4nc018/DWES/blob/main/edited/The_Elder_Scrolls_V_Skyrim_cover%20(100x100).jpg"
+  }
+]
