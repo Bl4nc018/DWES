@@ -30,8 +30,6 @@ class LoadingWindow:
         self.thread = threading.Thread(target=self.fetch_json_data)
         self.thread.start()
         
-        self.root.destroy()
-        
         
     def draw_progress_circle(self, progress):
         self.canvas.delete("progress")  ## Esta línea es necesaria para poder borrar cualquier dibujo anterior previo al inicio de la función
