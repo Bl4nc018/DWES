@@ -1,6 +1,8 @@
 import json
 import threading
 import tkinter as tk
+import requests
+from window import MainWindow
 
 
 class LoadingWindow:
@@ -25,8 +27,10 @@ class LoadingWindow:
         
         self.update_progress_circle()
         
-    #   self.thread = threading.Thread(target=self.fetch_json_data)
-    #   self.thread.start()
+        self.thread = threading.Thread(target=self.fetch_json_data)
+        self.thread.start()
+        
+        self.root.destroy()
         
         
     def draw_progress_circle(self, progress):
@@ -45,3 +49,18 @@ class LoadingWindow:
         
         self.draw_progress_circle(self.progress)
         self.root.after(100, self.update_progress_circle)
+        
+    ## Ejercicio 3: Descargar json
+    
+    def fetch_json_data(self):
+        response = requests.get("https://api.github.com/repos/Bl4nc018/DWES/contents/catalog.json?ref=main")       
+        if response.status_code == 200:
+            json_data = response.json() ## Recoje en una variable la respuesta del .json
+            #launch_main_window(json_data)
+        print(response.json()) ## Imprime el .json sin decodif.
+        
+
+# def launch_main_window(json_data):
+#     root = tk.Tk()
+#     app = LoadingWindow(root, json_data)
+#     root.mainloop()
