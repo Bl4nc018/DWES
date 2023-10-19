@@ -37,6 +37,11 @@ class MainWindow():
                                     ## anteriormente como self.cell_list.
 
         label = ttk.Label(root, image=cell.imagen, text=name, compound=tk.BOTTOM)
-        label.grid(row=len(self.cell_list) - 1, column=0)  ## Como borramos el anterior for que empleabamos para recorrer todo el contenido dentro de la lista e ir leyendolo para mostrarlo en la ventana.
-                                                           ## Aqui usaremos la longitud de la lista menos 1 para poder definir adecuadamente cuantas filas tendrá lo que se mostrará por pantalla.
+        label.grid(row=0, column=len(self.cell_list) - 1)  ## Como borramos el anterior for que empleabamos para recorrer todo el contenido dentro de la lista e ir leyendolo para mostrarlo en la ventana.
+                                                           ## Aqui usaremos la linea con la longitud de la lista -1 para que se muestren todas las imagenes en una sola fila.
+                                                           ## Si empleamos la longitud en las filas, nos quedará, aunque en el centro, saldrá cortado por un cuarto de la pantalla.
         label.bind("<Button-1>", lambda event, cell=cell: self.on_button_clicked(cell))
+        
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2  ## A diferencia de loading window, aqui no se emplea self.root porque no esta definido en mainwindow
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
+    root.geometry(f"+{int(x)}+{int(y)}")

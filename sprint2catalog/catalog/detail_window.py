@@ -9,6 +9,10 @@ def detWindow(cell):
                          
     root.title("Información extra acerca del juego.") ## Título de la ventana.
     
+    x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2
+    y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
+    root.geometry(f"+{int(x)}+{int(y)}")
+    
     label1 = ttk.Label(root, text=cell.name) ## Esta es la que contendrá el título del videojuego
     label1.pack()
     label = ttk.Label(root, image=cell.imagen, compound=tk.BOTTOM) ## Esta línea es para llamar a la foto almacenada en Cell()

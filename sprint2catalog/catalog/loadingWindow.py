@@ -39,6 +39,10 @@ class LoadingWindow:
         self.thread = threading.Thread(target=self.fetch_json_data)
         self.thread.start()
         
+        x = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth()) / 2
+        y = (self.root.winfo_screenheight() - self.root.winfo_reqheight()) / 2
+        self.root.geometry(f"+{int(x)}+{int(y)}")
+        
         
     def draw_progress_circle(self, progress):
         self.canvas.delete("progress")  ## Esta línea es necesaria para poder borrar cualquier dibujo anterior previo al inicio de la función
