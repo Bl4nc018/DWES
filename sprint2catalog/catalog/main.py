@@ -1,4 +1,3 @@
-import threading
 from tkinter import Tk 
 from loadingWindow import LoadingWindow
 

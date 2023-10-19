@@ -12,6 +12,8 @@ class LoadingWindow:
         self.root.geometry("250x200") ## Tamaño ventana carga
         self.root.resizable(False, False) ## Argumento empleado para evitar que varie el tamaño de la ventana de carga
         
+        self.finished=False
+        
         ## Etiqueta:
         self.label = tk.Label(self.root, text="Cargando datos...", font=("Arial", 14))
         self.label.pack(side=tk.TOP, pady=10)
@@ -25,12 +27,16 @@ class LoadingWindow:
         
         self.draw_progress_circle(self.progress) ## a la función creada se le pasa el atributo propio de progreso, que instanciamos en 0
         
+        
+        
+        self.thread = threading.Thread(target=self.fetch_json_data) ## Guardamos datos en el thread
+        self.thread.start() ## Comenzamos el thread
+        
+        self.check_thread() ## Comprobamos estado del thread
+        
         self.update_progress_circle()
         
-        self.thread = threading.Thread(target=self.fetch_json_data)
-        self.thread.start()
-        
-        self.root.destroy()
+       # self.root.destroy()
         
         
     def draw_progress_circle(self, progress):
@@ -53,14 +59,25 @@ class LoadingWindow:
     ## Ejercicio 3: Descargar json
     
     def fetch_json_data(self):
-        response = requests.get("https://api.github.com/repos/Bl4nc018/DWES/contents/catalog.json?ref=main")       
+        response = requests.get("https://raw.githubusercontent.com/Bl4nc018/DWES/main/catalog.json")       
         if response.status_code == 200:
-            json_data = response.json() ## Recoje en una variable la respuesta del .json
-            #launch_main_window(json_data)
-        print(response.json()) ## Imprime el .json sin decodif.
+            self.json_data = response.json() ## Recoje en una variable la respuesta del .json
+            self.finished=True
+        # print(response.json()) ## Imprime el .json sin decodif. para confirmar que si se descarga.
         
+    def check_thread(self):
+        if self.finished:
+            self.root.destroy()
+            launch_main_window(self.json_data)
+        else:
+            self.root.after(100, self.check_thread)
 
-# def launch_main_window(json_data):
-#     root = tk.Tk()
-#     app = LoadingWindow(root, json_data)
-#     root.mainloop()
+        
+        
+## Ejercicio 4: Despliegue ventana detalle y renderizado del JSON.
+
+def launch_main_window(json_data):
+    root = tk.Tk()
+    app = MainWindow(root, json_data)
+    root.mainloop()
+

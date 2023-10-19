@@ -1,5 +1,3 @@
-## Ejercicio 7:
-
 import tkinter as tk
 from tkinter import ttk
 
@@ -11,11 +9,10 @@ def detWindow(cell):
                          
     root.title("Información extra acerca del juego.") ## Título de la ventana.
     
-    
-    label = ttk.Label(root, image=cell.imagen_redi) ## Aquí creamos la etiqueta que contendra la imagen-
-    label.pack() ## La paqueamos
-    label1 = ttk.Label(root, text=cell.title) ## Esta es la que contendrá el título del videojuego
+    label1 = ttk.Label(root, text=cell.name) ## Esta es la que contendrá el título del videojuego
     label1.pack()
+    label = ttk.Label(root, image=cell.imagen, compound=tk.BOTTOM) ## Esta línea es para llamar a la foto almacenada en Cell()
+    label.pack()
     label2 = ttk.Label(root, text=cell.descripcion) ## Esta contendrá la descripción.
     label2.pack()
     
