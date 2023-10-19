@@ -36,7 +36,8 @@ class LoadingWindow:
         
         self.update_progress_circle()
         
-       # self.root.destroy()
+        self.thread = threading.Thread(target=self.fetch_json_data)
+        self.thread.start()
         
         
     def draw_progress_circle(self, progress):
