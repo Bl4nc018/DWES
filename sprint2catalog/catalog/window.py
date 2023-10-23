@@ -59,6 +59,3 @@ class MainWindow():
     menu_archivo.add_command(label="Acerca de", command=self.on_button_clicked2)
     barra_menus.add_cascade(menu=menu_archivo, label="Ayuda")
     root.config(menu=barra_menus)
-  
-  def archivo_nuevo_presionado(root):
-    print("¡Has presionado para crear un nuevo archivo!")
