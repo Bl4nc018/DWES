@@ -1,4 +1,4 @@
-from tkinter import ttk
+from tkinter import messagebox, ttk
 import tkinter as tk
 
 import requests
@@ -20,6 +20,10 @@ class MainWindow():
 
   def on_button_clicked(self, cell):
     detWindow(cell) ## Llamamos a la funcion con la que haremos la segunda ventana.
+    
+  def on_button_clicked2(self):
+    mensajito = "La desarrolladora de esta página la ha programado con Python."
+    messagebox.showinfo("Acerca del desarrollador", mensajito)
     
   def __init__(self, root, json_data):
     root.title("Top 5 Juegos:")
@@ -45,3 +49,16 @@ class MainWindow():
     x = (root.winfo_screenwidth() - root.winfo_reqwidth()) / 2  ## A diferencia de loading window, aqui no se emplea self.root porque no esta definido en mainwindow
     y = (root.winfo_screenheight() - root.winfo_reqheight()) / 2
     root.geometry(f"+{int(x)}+{int(y)}")
+    
+    ## Ejercicio 6:
+    
+    barra_menus = tk.Menu()
+    menu_archivo = tk.Menu(barra_menus, tearoff=False)
+
+
+    menu_archivo.add_command(label="Acerca de", command=self.on_button_clicked2)
+    barra_menus.add_cascade(menu=menu_archivo, label="Ayuda")
+    root.config(menu=barra_menus)
+  
+  def archivo_nuevo_presionado(root):
+    print("¡Has presionado para crear un nuevo archivo!")
