@@ -1,23 +1,30 @@
 [
   {
+    "fallos": 0,
     "image_url": "https://raw.githubusercontent.com/Bl4nc018/DWES/main/sprint2catalog/Ejercicio%20extra%20ahorcado/Im%C3%A1genes/Fase%200.png"
   },
   {
+    "fallos": 1,
     "image_url": "https://raw.githubusercontent.com/Bl4nc018/DWES/main/sprint2catalog/Ejercicio%20extra%20ahorcado/Im%C3%A1genes/Fase%201.png"
   },
   {
+    "fallos": 2,
     "image_url": "https://raw.githubusercontent.com/Bl4nc018/DWES/main/sprint2catalog/Ejercicio%20extra%20ahorcado/Im%C3%A1genes/Fase%202.png"
   },
   {
+    "fallos": 3,
     "image_url": "https://raw.githubusercontent.com/Bl4nc018/DWES/main/sprint2catalog/Ejercicio%20extra%20ahorcado/Im%C3%A1genes/Fase%203.png"
   },
   {
+    "fallos": 4,
     "image_url": "https://raw.githubusercontent.com/Bl4nc018/DWES/main/sprint2catalog/Ejercicio%20extra%20ahorcado/Im%C3%A1genes/Fase%204.png"
   },
   {
+    "fallos": 5,
     "image_url": "https://raw.githubusercontent.com/Bl4nc018/DWES/main/sprint2catalog/Ejercicio%20extra%20ahorcado/Im%C3%A1genes/Fase%205.png"
   },
   {
+    "fallos": 6,
     "image_url": "https://raw.githubusercontent.com/Bl4nc018/DWES/main/sprint2catalog/Ejercicio%20extra%20ahorcado/Im%C3%A1genes/Fase%206.png"
   }
 ]
