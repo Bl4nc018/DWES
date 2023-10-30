@@ -6,11 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".CatalogActivity">
 
-    <TextView
+    <!-- Definimos el Botón en el .xml y con la línea 17 nos aseguramos de que, pese a estar centrado horizontalmente con el resto de constraints,
+    esta estea a 0.25 de la izquierda. Además de que añadimos un id para reconocer el botón y poner un margen con el top de la pantalla de 20dp-->
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Navegar al detalle"
+        android:id="@+id/navego"
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
