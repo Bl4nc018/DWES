@@ -6,25 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
-    <!-- Este TextView indica el título de la imagen, asegurandose de que envuelva correctamente a su contenido
-     con los "wrap_content". Tiene el id correspondiente, con un margen con la parte de arriba del layout de 15dp-->
+    <!-- Actualización: Además de lo que ocurría en el layout activity detail, añadimos un bias para ponerlo arriba a la izquierda centrado.-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/titulo"
-        android:text="Título"
+        android:text="Una tremenda taza"
         android:layout_marginTop="15dp"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Para el borde circular de la imagen, se empleó un CardView, que es un contenedor para, entre otras cosas,
-    imágenes. Se usa como una tarjeta a la que puede agregarse sombras o bordes redondeados al contenido.
-
-    Dentro del CardView, se incluye un ImageView al que agregamos los constraints para que la imagen se
-    mantenga en el sitio deseado, además de los márgenes. En el CardView también se agregan los layout
-    pertinentes. Además de asegurarse de tener un constraint respecto al titulo.-->
+    <!-- Actualización: Añadimos un constraint bias horizontal para ponerlo debajo del título.-->
 
     <androidx.cardview.widget.CardView
         android:layout_width="200dp"
@@ -33,6 +28,7 @@
         android:layout_gravity="center"
         android:id="@+id/imagen"
         app:cardCornerRadius="250dp"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintTop_toBottomOf="@+id/titulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,29 +45,32 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.cardview.widget.CardView>
 
+
+    <!-- Actualización: La altura y anchura de la descripción pasa a ser definida en lugar de envolver el contenido.
+    Recordamos añadir un margen al comienzo para que, como tenemos un constraint de izquierda a derecha con la imagen
+    estea, tanto la descripción como el botón, ubicados como en la interfaz de ejemplo.-->
+
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/descripcion"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="center"
-        android:text="Descripción"
-        app:layout_constraintTop_toBottomOf="@+id/imagen"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="25dp"
+        android:gravity="left|top"
+        android:text="Una taza increiblemente bonita de color blanco delante de un
+fondo de color negro."
+        app:layout_constraintBottom_toTopOf="@+id/meGusta"
+        app:layout_constraintStart_toEndOf="@+id/imagen" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/meGusta"
         android:text="Me Gusta"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="50dp"
         android:layout_marginBottom="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagen"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
