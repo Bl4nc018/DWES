@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:id="@+id/imagen"
-        app:cardCornerRadius="250dp"
+        app:cardCornerRadius="50dp"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintTop_toBottomOf="@+id/titulo"
         app:layout_constraintStart_toStartOf="parent"
