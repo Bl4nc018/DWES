@@ -1,23 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CatalogActivity">
 
-    <!-- Definimos el Botón en el .xml y con la línea 17 nos aseguramos de que, pese a estar centrado horizontalmente con el resto de constraints,
-    esta estea a 0.25 de la izquierda. Además de que añadimos un id para reconocer el botón y poner un margen con el top de la pantalla de 20dp-->
+    <!-- Definimos el diseño principal de la actividad (ConstraintLayout).
+    Este diseño utiliza las bibliotecas de AndroidX para la gestión de restricciones. -->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Navegar al detalle"
-        android:id="@+id/navego"
-        android:layout_marginTop="20dp"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+    <!-- Agregamos un contenedor que permite mostrar un cajónde navegación desde el borde de la
+    pantalla. Este cajón de navegación se puede abrir desde el lado izquierdo ("start"). -->
+
+        <LinearLayout
+            android:id="@+id/home_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <!-- Definimos el "home_content" (es un LinearLayout) que actúa como el contenedor principal del
+    contenido de la actividad. El contenido de la actividad se reemplazará dinámicamente por
+    fragmentos en esta vista. -->
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize" />
+
+    <!-- Agregamos la barra deacción superior en la actividad. (Toolbar) Puede contener elementos
+    como el título de la actividad y botones de acción. -->
+
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/activity_catalog_navigation_drawer"/>
+
+    <!-- Añadimos un NavigationView, que representa el cajón de navegación. Este cajón se
+    encuentra a la izquierda en la pantalla representado con tres barras. Puede contener elementos
+    de menú y una cabecera personalizada. -->
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

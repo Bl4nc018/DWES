@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!-- Definimos el diseño lineal (LinearLayout) como el principal de la vista.
+         Este organiza sus elementos de forma vertical debido a la orientación. -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textaco"
+        android:text="Una taza blanca es un recipiente de cerámica o porcelana con forma cilíndrica, asa, y de color blanco puro."
+        android:gravity="left"
+        android:layout_marginBottom="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Dentro del LinearLayout, definimos el TextView como lo solicita la tarea.
+         Nota: Las restricciones "app:layout_constraint..." son inaplicables en un LinearLayout y pueden eliminarse. -->
+
+</LinearLayout>

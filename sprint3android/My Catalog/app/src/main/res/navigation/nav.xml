@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/CatalogActivity">
+
+    <fragment
+        android:id="@+id/CatalogActivity"
+        android:name="com.example.mycatalog.CatalogFragment"
+        android:label="@string/CatalogFragment"
+        tools:layout="@layout/fragment_catalog">
+        <argument
+            android:defaultValue="@string/CatalogFragment"
+            app:argType="reference" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/AboutActivity"
+        android:name="com.example.mycatalog.CatalogFragment"
+        android:label="@string/AboutFragment"
+        tools:layout="@layout/fragment_catalog">
+        <argument
+            android:defaultValue="@string/AboutFragment"
+            app:argType="reference" />
+    </fragment>
+
+</navigation>

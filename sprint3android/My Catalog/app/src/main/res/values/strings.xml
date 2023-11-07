@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Catalog</string>
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="informacion">Información extra</string>
+    <string name="copyright">© Ania Blanco\n</string>
+
+    <string name="CatalogFragment">Catálogo.</string>
+    <string name="AboutFragment">About.</string>
+
 </resources>
