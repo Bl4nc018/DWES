@@ -38,9 +38,13 @@ public class GameViewHolder extends RecyclerView.ViewHolder{
             @Override
             public void onClick(View v) {
                 Context context = v.getContext();
-
                 Intent intent = new Intent(context, DetailActivity.class);
-
+                // Ejercicio #3: Mediante el uso de intents, empleamos putExtra() que es una función que nos permite
+                // añadir datos adicionales a un intent antes de iniciar un nuevo componente. get(TipoVariable)Extra() es lo que
+                // nos permite recoger estos datos enviados.
+                intent.putExtra("name", gameData.getName());
+                intent.putExtra("descripcion", gameData.getDescripcion());
+                intent.putExtra("image_url", gameData.getImage_url());
                 context.startActivity(intent);
             }
         });
