@@ -6,19 +6,22 @@
         <item name="android:windowBackground">@color/colorFondo</item>
     </style>
 
-    <!-- Estilo del texto -->
-    <style name="TextoEstilo">
-        <!-- Modificar el color del texto -->
-        <item name="android:textColor">@color/colorTexto</item>
+
+    <!-- Estilo para los títulos de texto -->
+    <style name="EstiloTitulo">
+        <item name="android:textSize">20sp</item> <!-- Tamaño del texto -->
+        <item name="android:textColor">@color/colorTitulo</item> <!-- Color del texto -->
+        <item name="android:textStyle">bold</item> <!-- Negrita -->
     </style>
 
     <!-- Estilo de los botones -->
     <style name="BotonEstilo" parent="Widget.AppCompat.Button">
         <!-- Modificar el estilo de los botones -->
-        <item name="android:background">@color/colorTexto</item>
-        <!-- Ajustar la anchura y altura para que sea cuadrado -->
-        <item name="android:layout_width">50dp</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/colorBoton</item>
+        <item name="android:textColor">@android:color/white</item> <!-- Color del texto del botón -->
+        <item name="android:textSize">16sp</item> <!-- Tamaño del texto del botón -->
+        <item name="android:layout_width">40dp</item> <!-- Ancho del botón -->
+        <item name="android:layout_height">40dp</item> <!-- Altura del botón -->
     </style>
 
 
