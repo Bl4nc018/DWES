@@ -12,22 +12,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <!-- Ejercicio 4: Dado un color distinto a los textos. -->
     <TextView
         android:id="@+id/text_view_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/TextoEstilo"
         app:layout_constraintTop_toTopOf="@+id/image_view_game"
         app:layout_constraintBottom_toBottomOf="@+id/image_view_game"
         app:layout_constraintStart_toEndOf="@+id/image_view_game"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Ejercicio 2: Creando el botón.-->
+    <!-- Ejercicio 2: Creando el botón.
+    Ejercicio 4: Añadido un estilo al botón. Ahora es cuadrado.-->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"
         android:text="Vista detallada"
         android:layout_marginStart="10dp"
+        style="@style/BotonEstilo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_view_game"
         app:layout_constraintStart_toEndOf="@id/image_view_game"/>

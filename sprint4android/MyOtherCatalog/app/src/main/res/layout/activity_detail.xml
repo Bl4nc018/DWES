@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text = "Prueba"
+        style="@style/TextoEstilo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -21,7 +22,7 @@
     mantenga en el sitio deseado, además de los márgenes. En el CardView también se agregan los layout
     pertinentes.
 
-    // Ejercicio #3: Añado la explicación anterior, la empleada en el sprint anterior, para recordar
+    Ejercicio #3: Añado la explicación anterior, la empleada en el sprint anterior, para recordar
     como funciona el CardVIew.-->
 
     <androidx.cardview.widget.CardView
@@ -54,6 +55,7 @@
         android:layout_marginStart="10dp"
         android:textAlignment="center"
         android:text="Prueba 2"
+        style="@style/TextoEstilo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imagenCard"/>
